@@ -27,7 +27,12 @@ export const FEED_QUERY = gql`
 `;
 
 const LinkList = () => {
-    const { data } = useQuery(FEED_QUERY);
+    const {
+        data,
+        loading,
+        error,
+        subscribeToMore
+    } = useQuery(FEED_QUERY);
 
     return (
         <div>
